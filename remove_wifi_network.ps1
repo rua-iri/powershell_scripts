@@ -8,5 +8,6 @@ $wifiNetwork=(netsh.exe wlan show profiles) -match $networkName
 
 $wifiNetwork = $wifiNetwork.split(":")[1].trim()
 
-wlan wlan delete profile $wifiNetwork
+netsh wlan delete profile $wifiNetwork
+
 
